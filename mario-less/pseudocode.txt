@@ -1,0 +1,7 @@
+1. ASK user for height of tower
+2. IF height is smaller than one or bigger than 8, go back to step 1
+3. iterate from 1 through to height:
+   1. On iteration i it PRINTS out i-1 amount of spaces
+   2. PRINTS i number of blocks on i iteration
+   3. PRINTS new line
+4. Go back to step 3 until i is equal to height
