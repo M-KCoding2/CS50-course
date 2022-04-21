@@ -1,0 +1,1 @@
+SELECT title FROM movies, people, stars WHERE people.id = stars.person_id AND movies.id = stars.movie_id AND people.name = 'Helena Bonham Carter' AND title IN (SELECT title FROM movies, people, stars WHERE people.id = stars.person_id AND movies.id = stars.movie_id AND people.name = 'Johnny Depp');
