@@ -1,0 +1,11 @@
+sort1 uses: Bubble sort
+
+How do you know?: This is because it takes very long when sorting a very big data set
+
+sort2 uses: Merge sort
+
+How do you know?: It has most closest runtimes between datasets and performs the fastest overall
+
+sort3 uses: Selection sort
+
+How do you know?: This is because it is faster than sort1 but slower than sort2 and takes very little time for short data set and takes less time for big sets of data than sort1.

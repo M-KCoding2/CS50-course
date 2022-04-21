@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+            document.addEventListener('DOMContentLoaded', function(){
+                let right = document.querySelector('.right');
+                right.addEventListener('click', function(){
+                    right.style.backgroundColor = 'green';
+                    document.querySelector('#rorw').innerHTML = 'Right';
+                })
+                let wrong = document.querySelectorAll('.wrong');
+                for (let i = 0; i < wrong.length; i++){
+                    wrong[i].addEventListener('click', function(){
+                        wrong[i].style.backgroundColor = 'red';
+                        document.querySelector('#rorw').innerHTML = 'Wrong';
+                    });
+                }
+                document.querySelector('#Enter').addEventListener('click',function(){
+                    let input = document.querySelector('input');
+                    if (input.value === 'Berlin'){
+                        input.style.backgroundColor = 'green';
+                        document.querySelector('#correctornot').innerHTML = "Right";
+                    } else {
+                        input.style.backgroundColor = 'red';
+                        document.querySelector('#correctornot').innerHTML = 'Wrong';
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3>What is a baby shark called?</h3>
+
+                <button id="right" class="right">Pups</button>
+                <button id="wrong" class="wrong">Larval</button>
+                <button id="wrong" class="wrong">Fry</button>
+
+                <p id="rorw"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>What is the capital city of Germnay?</h3>
+                <input type="text">
+                <button type="submit" id="Enter">Enter</button>
+                <p id="correctornot"></p>
+            </div>
+        </div>
+    </body>
+</html>
